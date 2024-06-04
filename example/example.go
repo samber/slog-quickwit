@@ -17,7 +17,7 @@ func main() {
 	//     -H 'Content-Type: application/yaml' \
 	//     --data-binary @test-config.yaml
 
-	client := quickwit.NewWithDefault("http://localhost:7280")
+	client := quickwit.NewWithDefault("http://localhost:7280", "my-index")
 	defer client.Stop() // flush and stop
 
 	logger := slog.New(slogquickwit.Option{Level: slog.LevelDebug, Client: client}.NewQuickwitHandler())

@@ -3,7 +3,7 @@ module github.com/samber/slog-quickwit
 go 1.21
 
 require (
-	github.com/samber/go-quickwit v0.1.1
+	github.com/samber/go-quickwit v0.1.2
 	github.com/samber/slog-common v0.16.0
 	go.uber.org/goleak v1.2.1
 )
