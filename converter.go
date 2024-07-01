@@ -18,6 +18,7 @@ func DefaultConverter(addSource bool, replaceAttr func(groups []string, a slog.A
 
 	// developer formatters
 	attrs = slogcommon.ReplaceAttrs(replaceAttr, []string{}, attrs...)
+	attrs = slogcommon.RemoveEmptyAttrs(attrs)
 
 	// handler formatter
 	log := map[string]any{
