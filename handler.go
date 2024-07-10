@@ -80,6 +80,11 @@ func (h *QuickwitHandler) WithAttrs(attrs []slog.Attr) slog.Handler {
 }
 
 func (h *QuickwitHandler) WithGroup(name string) slog.Handler {
+	// https://cs.opensource.google/go/x/exp/+/46b07846:slog/handler.go;l=247
+	if name == "" {
+		return h
+	}
+
 	return &QuickwitHandler{
 		option: h.option,
 		attrs:  h.attrs,
