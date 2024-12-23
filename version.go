@@ -1,4 +1,4 @@
 package slogquickwit
 
 const name = "samber/slog-quickwit"
-const version = "VERSION" // replaced by .github/workflows/release.yml
+const version = "v0.3.1" // replaced by .github/workflows/release.yml
